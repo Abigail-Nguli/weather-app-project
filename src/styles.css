@@ -109,7 +109,7 @@ a:hover{
     font-size: 37px;
 }
 
-.predictedTemp{
+.predictedTemp, .day{
     font-weight: bold;
 }
 
