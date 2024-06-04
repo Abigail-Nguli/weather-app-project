@@ -1,3 +1,32 @@
+function changeTime(timeNow) {
+  let currentTime = new Date();
+
+  let weekDay = document.querySelector("#Day");
+  let day = currentTime.getDay();
+
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  weekDay.innerHTML = days[day];
+
+  let hours = currentTime.getHours();
+  let minutes = currentTime.getMinutes();
+
+  let time = document.querySelector("#tempTime");
+
+  if (minutes < 10) {
+    time.innerHTML = `${hours}:0${minutes}`;
+  }else{
+    time.innerHTML = `${hours}:${minutes}`;
+  }
+}
+
 function updateWeather(response) {
   let temperature = document.querySelector("#temp");
 
@@ -13,10 +42,13 @@ function updateWeather(response) {
 
   temp = Math.round(response.data.temperature.current);
 
-  let icon = document.querySelector("#icon");
-  
-
   temperature.innerHTML = `${temp} °C`;
+
+  let timeElement = document.querySelector("#tempTime");
+  changeTime(timeElement);
+
+  let icon = document.querySelector(".icon");
+  icon.innerHTML = `<img src="${response.data.condition.icon_url}"   id="icon">`;
 }
 
 function searchTemp(cityValue) {
@@ -33,19 +65,8 @@ function searchCity(event) {
   searchTemp(city.value);
 }
 
+city = "Nairobi";
+searchTemp(city);
+
 let searchButton = document.querySelector("#searchBtn");
 searchButton.addEventListener("click", searchCity);
-
-let currentTime = new Date();
-
-let weekDay = document.querySelector("#Day");
-let day = currentTime.getDay();
-
-let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-weekDay.innerHTML = days[day];
-
-let hours = currentTime.getHours();
-let minutes = currentTime.getMinutes();
-
-let time = document.querySelector("#tempTime");
-time.innerHTML = `${hours}:0${minutes}`;
