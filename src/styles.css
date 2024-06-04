@@ -1,0 +1,118 @@
+body{
+    background: linear-gradient(to top, #cddded 0%, white 100%);
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    align-items: center;
+}
+
+input{
+    border-radius: 8px;
+    padding: 12px;
+}
+
+header{
+    background: linear-gradient(180.3deg, rgb(221, 221, 221) 5.5%, rgb(110, 136, 161) 90.2%);
+    border-radius: 12px;
+    padding: 12px 28px;
+    color: rgb(11, 62, 71);
+    line-height: 1.2;
+    margin-right: 8px;
+}
+
+ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6px;
+    padding: 0;
+    margin-left: 10px;
+}
+
+li{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-size: 17px;
+    color: rgb(11, 62, 71);
+    text-align: center;
+    margin: auto 8px;
+}
+
+li p{
+    line-height: 1.1;
+}
+
+footer{
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(59, 6, 108);
+    font-weight: bold;
+}
+
+a:hover{
+    color: blueviolet;
+}
+
+.container{
+    display: block;
+    margin: 25px auto;
+    padding: 14px;
+    border-radius: 10px;
+    min-width: 480px;
+    max-width: 720px;
+    background: radial-gradient(circle at 18.7% 37.8%, rgb(250, 250, 250) 0%, rgb(225, 234, 238) 90%);
+}
+
+.search-bar{
+    width: 220px;
+    margin-right: 12px;
+}
+
+.search-btn{
+    text-align: center;
+    background: rgb(2, 2, 59);
+    width: 80px;
+    font-weight: 600;
+    font-size: 14px;
+    color: beige;
+}
+
+.search-btn:hover{
+    background: #cddded;
+    color: rgb(6, 5, 66);
+}
+
+.values{
+    display: grid;
+    grid-template-columns: 225px 460px;
+    padding: 15px 28px;
+}
+
+.mainTemp{
+    font-weight: bold;
+    font-size: 26px;
+}
+
+.mainSymbol{
+    font-size: 52px;
+}
+
+.symbol{
+    font-size: 37px;
+}
+
+.predictedTemp{
+    font-weight: bold;
+}
+
+.description{
+    font-size: 13px;
+}
