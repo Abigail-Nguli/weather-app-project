@@ -1,5 +1,5 @@
 body{
-    background: linear-gradient(to top, #cddded 0%, white 100%);
+     background: linear-gradient(180.3deg, rgb(221, 221, 221) 5.5%, rgb(110, 136, 161) 90.2%);
 }
 
 nav{
@@ -15,7 +15,7 @@ input{
 }
 
 header{
-    background: linear-gradient(180.3deg, rgb(221, 221, 221) 5.5%, rgb(110, 136, 161) 90.2%);
+   background: linear-gradient(to top, #cddded 0%, white 100%);
     border-radius: 12px;
     padding: 12px 28px;
     color: rgb(11, 62, 71);
@@ -63,7 +63,7 @@ a:hover{
 
 .container{
     display: block;
-    margin: 25px auto;
+    margin: 164px auto;
     padding: 14px;
     border-radius: 10px;
     min-width: 480px;
