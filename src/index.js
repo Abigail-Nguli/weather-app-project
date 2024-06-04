@@ -2,13 +2,19 @@ function updateWeather(response) {
   let temperature = document.querySelector("#temp");
 
   let heading = document.querySelector("#city");
-  cityHeading = response.data.city
+  cityHeading = response.data.city;
   heading.innerHTML = `${cityHeading} |`;
 
   let country = document.querySelector("#country");
   country.innerHTML = response.data.country;
 
-  temp = Math.round(response.data.temperature.current)
+  let description = document.querySelector("#description");
+  description.innerHTML = response.data.condition.description;
+
+  temp = Math.round(response.data.temperature.current);
+
+  let icon = document.querySelector("#icon");
+  
 
   temperature.innerHTML = `${temp} °C`;
 }
@@ -29,3 +35,17 @@ function searchCity(event) {
 
 let searchButton = document.querySelector("#searchBtn");
 searchButton.addEventListener("click", searchCity);
+
+let currentTime = new Date();
+
+let weekDay = document.querySelector("#Day");
+let day = currentTime.getDay();
+
+let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+weekDay.innerHTML = days[day];
+
+let hours = currentTime.getHours();
+let minutes = currentTime.getMinutes();
+
+let time = document.querySelector("#tempTime");
+time.innerHTML = `${hours}:0${minutes}`;
