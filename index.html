@@ -5,11 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>🌥️Weather App</title>
     <link rel="stylesheet" href="./src/styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
   </head>
   <body>
     <div class="container">
       <nav>
-        <h1>Nairobi | Kenya</h1>
+        <h1>
+          <span id="city">Nairobi |</span>
+          <span id="country">Kenya</span>
+        </h1>
         <div class="searchForm">
           <input
             type="text"
@@ -32,7 +36,8 @@
         <header>
           <div class="currentTemp">
             <p>
-              <span class="mainTemp">17°C<br /></span>
+              <span class="mainTemp" id="temp">17 °C</span>
+              <br />
               Mostly clear<br />
               Chance of rain: 90%<br />
             </p>
