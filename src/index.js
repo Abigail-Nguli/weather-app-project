@@ -22,7 +22,7 @@ function changeTime(timeNow) {
 
   if (minutes < 10) {
     time.innerHTML = `${hours}:0${minutes}`;
-  }else{
+  } else {
     time.innerHTML = `${hours}:${minutes}`;
   }
 }
@@ -40,6 +40,9 @@ function updateWeather(response) {
   let description = document.querySelector("#description");
   description.innerHTML = response.data.condition.description;
 
+  let speed = document.querySelector("#speed");
+  speed.innerHTML = response.data.wind.speed;
+
   temp = Math.round(response.data.temperature.current);
 
   temperature.innerHTML = `${temp} °C`;
@@ -48,7 +51,7 @@ function updateWeather(response) {
   changeTime(timeElement);
 
   let icon = document.querySelector(".icon");
-  icon.innerHTML = `<img src="${response.data.condition.icon_url}"   id="icon">`;
+  icon.innerHTML = `<img src="${response.data.condition.icon_url}" id="icon">`;
 }
 
 function searchTemp(cityValue) {
