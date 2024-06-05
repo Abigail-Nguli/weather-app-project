@@ -68,6 +68,29 @@ function searchCity(event) {
   searchTemp(city.value);
 }
 
+function showForecast(day) {
+  let days = ["Mon", "Tue", "Wed", "Thur"];
+  let forecast = document.querySelector("#forecast");
+
+  days.forEach(function (day) {
+    forecast.innerHTML += `
+  <ul class="weekday">
+            <li class="dayForecast>
+              <span class="day"> ${day} </span>
+              <span class="symbol"> ☁️ </span>
+              <p>
+                <span class="predictedTemp"> 20° / </span>
+                  <span class="predictedTemp right">26°<br /> </span>
+                <span class="description"> Mostly Cloudy </span>
+              </p>
+            </li>
+          </ul>
+  `;
+  });
+}
+
+showForecast();
+
 city = "Nairobi";
 searchTemp(city);
 
