@@ -71,9 +71,9 @@ function searchTemp(cityValue) {
 
 function searchCity(event) {
   event.preventDefault();
-  let city = document.querySelector("#searchBar");
+  let cityElement = document.querySelector("#searchBar");
 
-  searchTemp(city.value);
+  searchTemp(cityElement.value);
 }
 
 function getForecast(city) {
@@ -85,7 +85,6 @@ function getForecast(city) {
 
 function showForecast(response) {
   let forecast = document.querySelector("#forecast");
-  forecast.innerHTML = "";
 
   response.data.daily.forEach(function (day, index) {
     if (index < 5) {
