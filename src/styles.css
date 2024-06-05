@@ -41,7 +41,7 @@ ul {
   padding: 0;
   margin-left: 10px;
 }
-/*
+
 li {
   display: flex;
   flex-direction: column;
@@ -55,8 +55,6 @@ li {
 li p {
   line-height: 1.1;
 }
-*/
-
 
 footer {
   text-align: center;
@@ -105,9 +103,9 @@ a:hover {
   color: rgb(6, 5, 66);
 }
 
-.dayTime{
-    font-weight: bold;
-    font-size: 16px;
+.dayTime {
+  font-weight: bold;
+  font-size: 16px;
 }
 
 .values {
@@ -126,11 +124,9 @@ a:hover {
   height: 19vh;
 }
 
-/*
 .symbol {
   font-size: 37px;
 }
-
 
 .predictedTemp,
 .day {
@@ -140,4 +136,3 @@ a:hover {
 .description {
   font-size: 13px;
 }
-*/
