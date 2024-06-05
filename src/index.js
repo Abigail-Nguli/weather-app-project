@@ -52,6 +52,8 @@ function updateWeather(response) {
 
   let icon = document.querySelector(".icon");
   icon.innerHTML = `<img src="${response.data.condition.icon_url}" id="icon">`;
+
+  getForecast(response.data.city);
 }
 
 function searchTemp(cityValue) {
@@ -68,7 +70,15 @@ function searchCity(event) {
   searchTemp(city.value);
 }
 
-function showForecast(day) {
+function getForecast(city) {
+  let apiKey = "fa483db98dc0o4b7fc5fdbea841a31ta";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${cityValue}&key=${apiKey}`;
+
+  axios.get(apiUrl).then(showForecast);
+}
+
+function showForecast(response) {
+
   let days = ["Mon", "Tue", "Wed", "Thur"];
   let forecast = document.querySelector("#forecast");
 
