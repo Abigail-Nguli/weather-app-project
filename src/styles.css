@@ -110,8 +110,8 @@ a:hover {
 
 .values {
   display: grid;
-  grid-template-columns: 225px 480px;
-  padding: 15px 20px;
+  grid-template-columns: 225px 520px;
+  padding: 12px;
   align-items: center;
   justify-content: center;
 }
