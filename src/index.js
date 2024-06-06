@@ -85,10 +85,11 @@ function searchCity(event) {
 
 function showForecast(response) {
   let forecast = document.querySelector("#forecast");
+  let forecastHTML = " ";
 
   response.data.daily.forEach(function (day, index) {
     if (index < 5) {
-      forecast.innerHTML += `
+      forecastHTML += `
               <ul class="weekday">
                 <li class="dayForecast">
                   <span class="day"> ${updateDay(day.time)} </span>
@@ -109,10 +110,10 @@ function showForecast(response) {
             `;
     }
   });
-  
+  forecast.innerHTML = forecastHTML;
 }
 
-let city = "Nairobi";
+city = "Nairobi";
 searchTemp(city);
 
 let searchButton = document.querySelector("#searchBtn");
