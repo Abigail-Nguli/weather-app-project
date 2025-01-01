@@ -150,12 +150,8 @@ a:hover {
 /*Small Screen*/
 @media only screen and (max-width: 600px) {
   .container {
-    margin: 80px 18px;
+    margin: 80px auto;
     min-width: none;
-  }
-
-  input {
-    width: 65px;
   }
 
   h1 {
@@ -163,7 +159,7 @@ a:hover {
   }
 
   .search-bar {
-    width: 120px;
+    width: 150px;
   }
 
   .search-btn {
@@ -186,15 +182,16 @@ a:hover {
   #forecast {
     display: flex;
     flex-wrap: wrap;
-  }
-
-  .weekday{
-    width: 255px;
-    font-size: 15px;
-    margin: 20px auto;
-    display: block; 
     border: 1px solid #cddded;
     border-radius: 10px;
+    margin-top: 20px;
+  }
+
+  .weekday {
+    width: 97px;
+    font-size: 11px;
+    margin: 20px auto;
+    display: block;
     padding-top: 12px;
   }
 }
