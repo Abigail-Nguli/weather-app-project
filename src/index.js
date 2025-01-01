@@ -100,7 +100,7 @@ function showForecast(response) {
                     )}° / </span>
                     <span class="predictedTemp right">${Math.round(
                       day.temperature.minimum
-                    )}°<br /> </span>
+                    )}°<br> </span> <br>
                     <span class="description"> ${
                       day.condition.description
                     } </span>

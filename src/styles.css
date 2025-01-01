@@ -151,20 +151,32 @@ a:hover {
 @media only screen and (max-width: 600px) {
   .container {
     margin: 80px auto;
-    min-width: none;
+    padding: 6px;
+    min-width: 0;
+  }
+
+  nav{
+    padding: 8px;
   }
 
   h1 {
     font-size: 16px;
   }
 
+  span{
+    display: block;
+  }
+
+
   .search-bar {
-    width: 150px;
+    width: 100px;
+    margin-right: 4px;
   }
 
   .search-btn {
     width: 60px;
-    font-size: 11px;
+    font-size: 10px;
+    padding: 14px;
   }
 
   .values {
@@ -173,25 +185,51 @@ a:hover {
   }
 
   header {
-    width: 40vh;
+    width: 30vh;
     margin: auto;
-    font-size: 22px;
+    font-size: 13px;
     text-align: center;
+    line-height: normal;
+  }
+
+  #icon{
+    width: 75px;
+    height: auto;
+    padding: 0;
   }
 
   #forecast {
     display: flex;
     flex-wrap: wrap;
-    border: 1px solid #cddded;
-    border-radius: 10px;
     margin-top: 20px;
   }
 
   .weekday {
-    width: 97px;
-    font-size: 11px;
+    width: 50px;
+    font-size: 8px;
     margin: 20px auto;
     display: block;
     padding-top: 12px;
+  }
+
+  .weekday .dayForecast {
+    font-size: 8px;
+  }
+
+  .description{
+    font-size: 8px;
+  }
+
+  li p {
+    font-size: 8px;
+  }
+
+  .symbol {
+    width: 38px;
+    padding: 0;
+  }
+
+  footer{
+    font-size: 13px;
   }
 }
